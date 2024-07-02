@@ -14,12 +14,9 @@ PHP MVC проект- Продавница за книги со користењ
 протокол.
 
 ![image](https://github.com/ilijana123/Book_Shop_![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/950c94de-2bb2-419f-854f-a3182866d88a)
-![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/950c94de-2bb2-419f-854f-a3182866d88a)
 PHP_MVC/assets/147696562/bd39e005-3f1e-4bf6-b560-810a6434c0cc)
-![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/bd39e005-3f1e-4bf6-b560-810a6434c0cc)
-![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/ac39b075-5909-40bd-9b0a-b34598bc91ef)
 ![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/ac39b075-5909-40bd-9b0a-b34598bc91ef)
 ![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/b0d06994-02d2-4e08-86a3-c05fd800ada6)
-![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/b0d06994-02d2-4e08-86a3-c05fd800ada6)![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/49455502-0d7f-4308-87e4-5e49c25f33aa)
-![image](https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/49455502-0d7f-4308-87e4-5e49c25f33aa)
+(https://github.com/ilijana123/Book_Shop_PHP_MVC/assets/147696562/49455502-0d7f-4308-87e4-5e49c25f33aa)
+
 
