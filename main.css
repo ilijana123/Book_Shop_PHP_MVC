@@ -1,0 +1,156 @@
+/* main.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    padding-top: 70px;
+}
+
+.navbar {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    background-color: white; /* White background */
+    height: 60px; /* Adjusted height */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #333333; /* Dark gray */
+    font-size: 1.5rem; /* Larger font size */
+}
+
+.navbar-nav .nav-link {
+    color: #333333; /* Dark gray */
+    font-weight: 500;
+    font-size: 1.2rem; /* Larger font size */
+}
+
+.navbar-nav .nav-link:hover {
+    color: coral; /* Coral color on hover */
+}
+
+#home {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* White text */
+    max-width: 800px; /* Adjusted max-width */
+    margin: 0 auto; /* Center align */
+    padding: 0 20px; /* Padding for content */
+    box-sizing: border-box; /* Ensures padding is included in max-width calculation */
+}
+
+#home h1 {
+    font-size: 3rem; /* Adjusted font size */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#home h4 {
+    font-size: 2rem; /* Larger font size */
+    font-weight: 600; /* Bold */
+}
+
+#home h5 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+#home p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+#home button {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 30px;
+}
+
+#brand .img-fluid {
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+#brand .img-fluid:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Dark background for contact section */
+#contact {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text */
+    padding: 50px 0; /* Adjusted padding */
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#contact a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: coral; /* Coral color on hover */
+}
+.container {
+    margin-top: 20px;
+}
+.genre-list {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#content {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Adjust margin from the top */
+}
+
+#content h2 {
+    margin-bottom: 20px; /* Space below the genre heading */
+    font-size: 2rem; /* Larger font size */
+}
+
+#content .table {
+    background-color: #fff; /* White background for table */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#content .table th,
+#content .table td {
+    vertical-align: middle; /* Center content vertically */
+}
+
+#content .btn {
+    border-radius: 5px; /* Rounded corners for buttons */
+    margin-right: 10px; /* Space between buttons */
+}
+
+#content .btn-success {
+    background-color: coral; /* Coral background color for Add Product button */
+}
+
+#content .btn-primary {
+    background-color: coral; /* Coral background color for Edit button */
+}
+
+#content .btn-danger {
+    background-color: #dc3545; /* Red background color for Delete button */
+}

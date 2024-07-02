@@ -1,0 +1,32 @@
+body {
+    background-image: url('https://p16-flow-sign-va.ciciai.com/ocean-cloud-tos-us/63092a680a28409a911b894a16b97d39.png~tplv-6bxrjdptv7-image.png?rk3s=18ea6f23&x-expires=1747223458&x-signature=pgXzJcmOT5PvluaMW6zNe1lD4Vk%3D');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: ble;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.table {
+    background: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.nav {
+    margin-bottom: 15px;
+}

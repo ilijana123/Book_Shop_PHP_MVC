@@ -1,0 +1,112 @@
+<?php
+function get_products() {
+    global $db;
+    $query = 'SELECT * FROM product ORDER BY productID';
+    $statement = $db->query($query);
+    return $statement->fetchAll();
+}
+
+function get_products_by_genre($genre_id) {
+    global $db;
+    $query = 'SELECT * FROM product WHERE genreID = :genre_id ORDER BY productID';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':genre_id', $genre_id);
+    $statement->execute();
+    $products = $statement->fetchAll();
+    $statement->closeCursor();
+    return $products;
+}
+
+function get_products_by_author($author_id) {
+    global $db;
+    $query = 'SELECT * FROM product WHERE authorID = :author_id ORDER BY productID';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':author_id', $author_id);
+    $statement->execute();
+    $products = $statement->fetchAll();
+    $statement->closeCursor();
+    return $products;
+}
+
+function get_product($product_id) {
+    global $db;
+    $query = 'SELECT * FROM product WHERE productID = :product_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':product_id', $product_id);
+    $statement->execute();
+    $product = $statement->fetch();
+    $statement->closeCursor();
+    return $product;
+}
+
+function delete_product($product_id) {
+    global $db;
+    $query = 'DELETE FROM product WHERE productID = :product_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':product_id', $product_id);
+    $statement->execute();
+    $statement->closeCursor();
+}
+
+function add_product($genre_id, $author_id, $image, $name, $price, $year, $num_pages, $description) {
+    global $db;
+    $query = 'INSERT INTO product (genreID, authorID, productCode, productTitle, listPrice, yearPublished, numPages, description)
+              VALUES (:genre_id, :author_id, :image, :name, :price, :year, :num_pages, :description)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':genre_id', $genre_id);
+    $statement->bindValue(':author_id', $author_id);
+    $statement->bindValue(':image', $image);
+    $statement->bindValue(':name', $name);
+    $statement->bindValue(':price', $price);
+    $statement->bindValue(':year', $year);
+    $statement->bindValue(':num_pages', $num_pages);
+    $statement->bindValue(':description', $description);
+    $statement->execute();
+    $statement->closeCursor();
+}
+function edit_product($product_id, $genre_id, $author_id, $image, $name, $price, $year, $num_pages, $description) {
+    global $db;
+
+    // Check if a new image file is uploaded
+    if (!empty($image['tmp_name'])) {
+        // Handle the new image upload
+        $image_path = upload_image($image);
+    } else {
+        // No new image uploaded, retain the existing productCode
+        $existing_product = get_product($product_id);
+        $image_path = $existing_product['productCode'];
+    }
+
+    // Update product details
+    $query = 'UPDATE product 
+              SET genreID = :genre_id,
+                  authorID = :author_id,
+                  productCode = :image,
+                  productTitle = :name,
+                  listPrice = :price,
+                  yearPublished = :year,
+                  numPages = :num_pages,
+                  description = :description
+              WHERE productID = :product_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':product_id', $product_id);
+    $statement->bindValue(':genre_id', $genre_id);
+    $statement->bindValue(':author_id', $author_id);
+    $statement->bindValue(':image', $image_path); // Use $image_path here
+    $statement->bindValue(':name', $name);
+    $statement->bindValue(':price', $price);
+    $statement->bindValue(':year', $year);
+    $statement->bindValue(':num_pages', $num_pages);
+    $statement->bindValue(':description', $description);
+    $statement->execute();
+    $statement->closeCursor();
+}
+
+// Function to handle image upload (example, adjust as per your upload logic)
+function upload_image($image) {
+    $upload_dir = 'uploads/';
+    $upload_file = $upload_dir . basename($image['name']);
+    move_uploaded_file($image['tmp_name'], $upload_file);
+    return $upload_file;
+}
+?>
